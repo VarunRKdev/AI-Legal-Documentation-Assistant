@@ -1,24 +1,34 @@
-#⚖️ AI-Legal-Documentation-Assistant
+⚖️ AI-Legal-Documentation-Assistant
 
-This Python script implements a simple, console-based application to match user-entered case details to relevant legal statutes from a local CSV file. It leverages natural language processing techniques, specifically **string similarity algorithms** and a **dictionary of legal synonyms**, to find matches that go beyond simple keyword comparison.
+A simple, console-based Python application that matches user-entered legal case details to relevant statutes from a local database. It leverages Natural Language Processing (NLP) techniques—specifically string similarity algorithms and synonym expansion—to find relevant laws even when exact keywords are missing.
 
-##🚀 Key Features
+🚀 Key Features
 
-* **Law Type Filtering:** Allows users to narrow down the search by a specific law type (e.g., 'Criminal', 'Civil').
-* **Semantic Matching:** Uses the `difflib.SequenceMatcher` to find similarity between words, enabling matches even with slight spelling variations.
-* **Synonym Generation:** Generates variations of law descriptions by substituting complex legal terms with simpler meanings (e.g., replacing 'contravenes' with 'violates'), greatly increasing the chance of a match against user input.
-* **Stop Word Removal:** Cleans both the law description and the user's case input by removing common words (`is`, `and`, `the`, etc.) before comparison.
-* **Jurisdictional Reference:** Generates a Google Search link for the matching law's jurisdictional reference for easy external lookup.
-* **CSV Output:** Saves all matching results to an `output.csv` file.
+Law Type Filtering: Narrow down searches by specific legal categories (e.g., 'Criminal', 'Civil') to improve accuracy.
 
-## ⚙️ Requirements & Installation
+Semantic Matching: Utilizes difflib.SequenceMatcher to calculate similarity between words, detecting matches despite spelling variations or typos.
 
-### Prerequisites
+Synonym Generation: automatically expands the search by substituting complex legal jargon with simpler synonyms (e.g., interpreting 'contravenes' as 'violates'), significantly increasing match probability.
 
-To run this script, you must have Python installed.
+Stop Word Removal: Filters out common noise words (e.g., is, and, the) from both the statute descriptions and user input to focus on key legal terms.
 
-### Dependencies
+Jurisdictional Reference: Generates direct Google Search links for specific laws to facilitate quick external research.
 
+CSV Output: Exports all identified matches to a standardized output.csv file for record-keeping.
+
+⚙️ Requirements
+
+Prerequisites
+
+Python 3.x installed on your machine.
+
+Dependencies
+
+This project relies on the following external library:
+
+pandas
+
+Note: The script also uses difflib and itertools, which are included in the standard Python library and do not require separate installation.
 This project relies on the **Pandas** library and the standard Python `difflib` and `itertools` modules.
 
 ```bash
