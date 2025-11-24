@@ -1,8 +1,8 @@
-⚖️ AI-Legal-Documentation-Assistant
+#⚖️ AI-Legal-Documentation-Assistant
 
 This Python script implements a simple, console-based application to match user-entered case details to relevant legal statutes from a local CSV file. It leverages natural language processing techniques, specifically **string similarity algorithms** and a **dictionary of legal synonyms**, to find matches that go beyond simple keyword comparison.
 
-🚀 Key Features
+##🚀 Key Features
 
 * **Law Type Filtering:** Allows users to narrow down the search by a specific law type (e.g., 'Criminal', 'Civil').
 * **Semantic Matching:** Uses the `difflib.SequenceMatcher` to find similarity between words, enabling matches even with slight spelling variations.
